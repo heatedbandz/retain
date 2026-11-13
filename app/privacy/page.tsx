@@ -14,6 +14,7 @@ export default function Privacy() {
           <li>Your email address, so you can sign in.</li>
           <li>Your first name, grade and classes, so the tutor can pitch explanations at your level.</li>
           <li>Your assignments and due dates.</li>
+          <li>If you connect Canvas, your private Canvas calendar feed link, so Retain can check it for new assignments. Disconnect it any time from <b>Me</b>.</li>
           <li>Your Notebook: the questions you ask the tutor, its answers, your lessons and quiz results, and the topics you have found hard.</li>
         </ul>
         <h2>Who can see it</h2>

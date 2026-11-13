@@ -7,6 +7,7 @@ A daily study app for students: an AI tutor that gives hints or answers, a Noteb
 - **Next.js** app. The interface lives in `lib/app.js` (plain DOM code), started by `app/RetainApp.tsx`.
 - **Supabase** handles sign-in (email link or Google) and stores each student's data. Row level security in `supabase/schema.sql` means a student can only read their own rows.
 - **`app/api/ai/route.ts`** is the only place the Anthropic API key is used. It checks the student is signed in, counts the request against a daily limit, and streams Claude's answer back.
+- **`app/api/canvas/route.ts`** imports assignments from Canvas. Each student pastes the private calendar feed link from their Canvas Calendar page (no school admin setup needed); the route fetches that .ics feed, only from public hosts and Canvas feed paths, and returns the assignments. The browser adds new ones to the student's list, keeps due dates current, and checks again every few hours.
 
 ## Setup
 
